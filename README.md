@@ -1,6 +1,6 @@
 # Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
 
-## Lisans Veren
+## Lisans Veren 
 
 ### Licensor: animewatch.org ve oyrut.com.tr
 ### E-posta: animewatchiletisim@gmail.com
