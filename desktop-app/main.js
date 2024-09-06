@@ -13,8 +13,8 @@ let fetch;
 })();
 
 const allowedDomains = [
-    'https://www.animeizlesene.com',
-    'https://animeizlesene.com'
+    'https://www.animewatch.org',
+    'https://animewatch.org'
 ];
 
 const clientId = '1280327744512589937'; // Discord uygulamanızın client ID'sini buraya ekleyin
