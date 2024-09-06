@@ -1,9 +1,16 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const RPC = require('discord-rpc');
-const fetch = require('node-fetch');
 const fs = require('fs');
 const { exec } = require('child_process');
+
+// Dinamik import için async/await kullanacağız
+let fetch;
+
+(async () => {
+    // node-fetch'i dinamik olarak import et
+    fetch = (await import('node-fetch')).default;
+})();
 
 const allowedDomains = [
     'https://www.animeizlesene.com',
@@ -38,6 +45,8 @@ function updateRPC(title) {
 // Dosyayı GitHub'dan çekme ve güncelleme
 async function updateMainJS() {
     try {
+        if (!fetch) return; // fetch dinamik olarak yüklenmemişse işlemi yapma
+        
         const response = await fetch(GITHUB_FILE_URL);
         if (response.ok) {
             const newFileContent = await response.text();
